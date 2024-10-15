@@ -1,0 +1,41 @@
+<div class="card-vote">
+    
+    @if(!voting){
+
+        <div style="display: flex;">
+            <h2>{{universe}}</h2> ----- <h2>{{name}}</h2>
+        </div>
+
+        <div>
+           <h3>Tu voto ha sido registrado!</h3>
+        </div>
+        
+        <div>
+            <app-button-vote-again (voteAgain)="newVote($event)" ></app-button-vote-again>
+        </div>
+    }
+    @else{
+        <div>
+            <span>Dinos tu opinion sobre</span>
+            <h2>{{name}}</h2>
+        </div>
+        <div>
+            <div class="descrip">
+                <p>{{description}}</p>
+                <img [src]="img + name +'.png'" > 
+            </div>
+            
+            <span><a>WIKI</a></span>
+        </div>
+    
+        <h4>Cual es tu voto?</h4>
+        <div class="buttons">
+            <app-buttons [type]="'like'" (outType)="eventVote($event)"></app-buttons>
+            <app-buttons [type]="'dislike'"  (outType)="eventVote($event)"></app-buttons>
+        </div>
+    }
+   
+
+    
+    
+</div>

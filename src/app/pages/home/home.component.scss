@@ -1,0 +1,16 @@
+
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 635px) {
+    .cards{
+        overflow: auto;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+}

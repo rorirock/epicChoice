@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+    height: 100vh;
+    color: #FFF;
+}
+
+.marvel{
+    left: 0px;
+    border-right: 3px solid #FFF;
+   background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),   url('assets/img/marvel.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.dc{
+    border-left: 3px solid #FFF;
+    right: 0px;
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),   url('assets/img/dc.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.dc, .marvel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}

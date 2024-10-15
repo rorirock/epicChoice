@@ -1,0 +1,7 @@
+<div class="container banner">
+
+    <app-votes-card [name]="heroe.name" [universe]="heroe.universe" [description]="heroe.description" (vote)="votes($event)"></app-votes-card>
+
+    <app-progress-bar [likes]="heroe.votes.like" [dislikes]="heroe.votes.notLike"></app-progress-bar>
+
+</div>

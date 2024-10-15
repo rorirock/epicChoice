@@ -1,0 +1,10 @@
+<div class="container">
+
+    <app-banner [heroe]="heroe" (heroeEvent)="saveData($event)"></app-banner>
+    <div class="cards">
+        @for( heroe of epicData; track heroe.id ){
+            <app-card [heroe]="heroe" (heroeEvent)="newChoice($event)"></app-card>
+        }
+    </div>
+   
+</div>
